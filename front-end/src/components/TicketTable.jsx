@@ -11,9 +11,9 @@ const TicketTable = ({ reportData }) => (
     >
       Ticket Report
     </h2>
-    <div className="w-full overflow-x-auto overflow-y-auto">
+    <div className="table-scroll w-full overflow-x-auto overflow-y-auto">
       <table 
-          className="w-full overflow-auto min-w-full whitespace-nowrap 
+          className=" w-full overflow-auto min-w-full whitespace-nowrap 
           table-auto border-collapse bg-white shadow-md rounded-lg">
         <thead className="bg-gray-200">
           

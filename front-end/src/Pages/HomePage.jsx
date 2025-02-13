@@ -1,4 +1,4 @@
-import React from 'react';
+import ct from 'react';
 import Header from '../components/Header';
 import FileUpload from '../components/FileUpload';
 import TicketTable from '../components/TicketTable';
@@ -14,7 +14,7 @@ const HomePage = ({ currentDate, isFileLoaded, handleFileUpload, fileName, repor
      
       {isFileLoaded && <Summary summary={summary} />}
 
-      {isFileLoaded && (<hr className='pb-20'></hr>)}
+      {isFileLoaded && (<hr className='pb-40'></hr>)}
 
       {isFileLoaded && <Charts 
         amPmChartData={amPmChartData} 
@@ -29,7 +29,7 @@ const HomePage = ({ currentDate, isFileLoaded, handleFileUpload, fileName, repor
         height="100%"
       />}
       {isFileLoaded && (
-        <div className="flex justify-center mt-4 gap-4">
+        <div className="flex justify-center mt-40 gap-4 ">
           <motion.button
             onClick={handlePrint}
             className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md"

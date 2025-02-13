@@ -4,9 +4,12 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import HomePage from "./Pages/HomePage";
-import { motion } from 'framer-motion';
 import "./app.css";
+import {  AnimatePresence } from "framer-motion";
+
+//Components
+import HomePage from "./Pages/HomePage";
+import IntroSection from "./components/IntroSection";
 
 // Register chart.js components and DataLabels plugin
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartDataLabels, ArcElement);
@@ -169,7 +172,19 @@ const App = () => {
     });
   };
 
+  const [introComplete, setIntroComplete] = useState(false);
+
   return (
+    <>
+    <p className="text-2xl p-6 mt-4 font-bold bg-gradient-to-r from-yellow-400 to-black text-transparent bg-clip-text 
+    inline-block select-none">
+  DTR
+</p>
+
+
+    <AnimatePresence>
+        {!introComplete && <IntroSection setIntroComplete={setIntroComplete} />}
+    </AnimatePresence>
     <HomePage 
       currentDate={currentDate}
       isFileLoaded={isFileLoaded}
@@ -187,6 +202,7 @@ const App = () => {
       statusChartRef={statusChartRef}
       handlePrint={handlePrint}
     />
+    </>
   );
 };
 

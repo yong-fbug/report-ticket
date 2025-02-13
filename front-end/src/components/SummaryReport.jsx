@@ -15,22 +15,22 @@ const Summary = ({ summary }) => (
       </ul>
     </div>
 
-      <div className='flex center justify-center space-x-6 pt-40'>
+      <div className='flex center justify-center space-x-20 pt-40'>
       <p className='text-lg'>
-      <p className='uppercase font-semibold text-lg font-mono'>Pending Tickets:</p>
+      <p className='uppercase font-semibold text-lg font-mono'>Assigned Tickets:</p>
           
-          <table className="table-auto mt-2">
+          <table className="table-auto mt-2 ">
             <thead>
               <tr>
-                <th className="px-4 py-2">Tech</th>
-                <th className="px-4 py-2">Count</th>
+                <th className="px-4 py-2 border-t-1">Tech</th>
+                <th className="px-4 py-2 border-t-1">Count</th>
               </tr>
             </thead>
             <tbody>
               {Object.entries(summary.sortedTechTickets).map(([tech, count]) => (
                 <tr key={tech}>
-                  <td className="border px-4 py-2">{tech}</td>
-                  <td className="border px-4 py-2">{count}</td>
+                  <td className="border px-4 py-2 text-sm">{tech}</td>
+                  <td className="border px-4 py-2 text-sm">{count}</td>
                 </tr>
               ))}
             </tbody>
@@ -41,23 +41,21 @@ const Summary = ({ summary }) => (
           <table className="table-auto mt-2">
             <thead>
               <tr>
-                <th className="px-4 py-2">Tech</th>
-                <th className="px-4 py-2">Count</th>
+                <th className="px-4 py-2 border-t-1 ">Tech</th>
+                <th className="px-4 py-2 border-t-1">Count</th>
               </tr>
             </thead>
             <tbody>
               {Object.entries(summary.sortedTechPendingTickets).map(([tech, count]) => (
                 <tr key={tech}>
-                  <td className="border px-4 py-2">{tech}</td>
-                  <td className="border px-4 py-2">{count}</td>
+                  <td className="border px-4 py-2 text-sm">{tech}</td>
+                  <td className="border px-4 py-2 text-sm">{count}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           </p>
         </div>
-      
-    
   </div>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FileUpload = ({ handleFileUpload, fileName }) => (
-  <div className="flex justify-center mb-4">
+  <div className="flex justify-center mb-4 p-6">
     <input
       type="file"
       accept=".csv"
@@ -11,7 +11,7 @@ const FileUpload = ({ handleFileUpload, fileName }) => (
     />
     <label
       htmlFor="fileInput"
-      className="px-4 py-2 bg-[#fabd16] hover:bg-[#f0b20a] text-white rounded-md cursor-pointer"
+      className="px-4 py-2  bg-[#fabd16] hover:bg-[#f0b20a] text-white rounded-md cursor-pointer"
     >
       Choose File
     </label>
